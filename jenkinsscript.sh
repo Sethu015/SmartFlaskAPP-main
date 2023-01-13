@@ -1,8 +1,12 @@
 #!/bin/bash
 . ~/.bashrc
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 pyenv versions
 
-pyenv global 3.6.9
+pyenv global 3.10.0
 python3 -m venv myenv --without-pip
 source myenv/bin/activate
 python3 -V
